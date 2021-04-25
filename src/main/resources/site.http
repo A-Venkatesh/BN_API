@@ -1,0 +1,27 @@
+
+POST http://localhost:8080/api/site
+Content-Type: application/json
+
+{
+  "aboutus": "Describe about you and your bussiness",
+  "returnPolicy":"All the policy information here",
+  "termsAndConditions":" describe the terms and conditions",
+  "username":"root",
+  "password":"password"
+}
+
+###
+
+PUT http://localhost:8080/api/site
+Content-Type: application/json
+
+{
+  "aboutus": "Describe about you and you're bussiness",
+  "returnPolicy": "All you're site policy information here",
+  "termsAndConditions": "Please describe the terms and conditions",
+  "username": "root",
+  "password": "password"
+}
+
+###
+GET http://localhost:8080/api/site

@@ -1,0 +1,69 @@
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "title": "detetel dede",
+  "categoryId": "qdw0rjiarl80",
+  "types": [
+    {
+      "label": "50g",
+      "price": "250"
+    },
+    {
+      "label": "100g",
+      "price": "350"
+    }
+  ],
+  "variants": [
+    {
+      "variant": "one"
+    },
+    {
+      "variant": "two"
+    }
+  ]
+}
+
+###
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+  "name": "Skin Care"
+}
+
+
+###
+
+
+
+PUT http://localhost:8080/api/products/qdyckc770rw8
+Content-Type: application/json
+
+{
+  "title": "deleye ffffff",
+  "categoryId": "qdw0rjiarl80",
+  "types": [
+    {
+      "label": "500g",
+      "price": "250"
+    },
+    {
+      "label": "100g",
+      "price": "350"
+    }
+  ],
+  "variants": [
+    {
+      "variant": "one"
+    },
+    {
+      "variant": "two"
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/api/products
+###
+DELETE http://localhost:8080/api/products

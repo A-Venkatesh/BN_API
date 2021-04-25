@@ -1,0 +1,19 @@
+PUT http://localhost:8080/api/promo
+Content-Type: application/json
+
+{
+  "variants": [
+    {
+      "url": "http://"
+    },
+    {
+      "url": "http://"
+    },
+    {
+      "url": "http://"
+    }
+  ]
+}
+
+###
+GET http://localhost:8080/api/promo

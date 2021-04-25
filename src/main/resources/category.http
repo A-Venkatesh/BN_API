@@ -1,0 +1,20 @@
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+
+{
+  "name": "Hair"
+}
+###
+PUT http://localhost:8080/api/categories/qdw0rjiarl80
+Content-Type: application/json
+
+{
+  "name": "Skin Care"
+}
+###
+GET http://localhost:8080/api/categories/rlan84nci2pk
+###
+GET http://localhost:8080/api/categories
+###
+DELETE http://localhost:8080/api/categories/rhug2s1svvhv
+###
