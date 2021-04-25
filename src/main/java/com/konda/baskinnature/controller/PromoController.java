@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/promo")
+@CrossOrigin("*")
 public class PromoController {
     @Autowired
     PromoServiceImpl promoService;

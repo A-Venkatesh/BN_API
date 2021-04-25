@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/testmonials")
+@CrossOrigin("*")
 public class TestmonialsController {
     @Autowired
     TestmonialsServiceImpl testmonialsService;
