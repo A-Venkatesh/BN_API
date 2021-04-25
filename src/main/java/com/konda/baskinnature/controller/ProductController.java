@@ -35,9 +35,15 @@ public class ProductController {
         return ResponseEntity.ok(updatedProduct);
     }
 
-    @GetMapping("/{slug}")
-    public ResponseEntity<Product> getProduct(@PathVariable String slug) {
-        Product product = productService.getProduct(slug);
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProduct(@PathVariable String id) {
+        Product product = productService.getProduct(id);
+        return ResponseEntity.ok(product);
+    }
+
+    @GetMapping("/product/{slug}")
+    public ResponseEntity<Product> getProductBySlug(@PathVariable String slug) {
+        Product product = productService.getProductBySlug(slug);
         return ResponseEntity.ok(product);
     }
 

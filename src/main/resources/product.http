@@ -37,33 +37,63 @@ Content-Type: application/json
 
 
 
-PUT http://localhost:8080/api/products/qdyckc770rw8
+PUT http://localhost:8080/api/products/u7rtdorzvd4i
 Content-Type: application/json
 
 {
-  "title": "deleye ffffff",
+  "title": "Face Elixir Pro v2",
+  "description": "<p><span style=\"color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">Bask in Nature's Face Elixir is a blend of pure, super-absorbent, nutrient-rich oils that helps by awarding you with clear, glowing skin. It purifies, balances &amp; cleanses your skin from within and reduces Acne, Oil imbalance and Inflammation. Regular use will give you a flawless complexion. The serum can be customized according to your Skin goals.</span></p><p><br></p><span style=\"color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">Ingredients (Dry to Normal) : Apricot Kernel Oil, Promegranate Oil, Avocado Oil, Jojoba Oil, Rosehip Oil, Moroccan Argan Oil, Grape Seed Oil and Moringa Oil.</span><p><br></p><span style=\"color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">Ingredients (Combination to Oily) : Rosehip Oil, Hempseed Oil and Grape Seed Oil.</span><p><br></p><p><span style=\"color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\">Directions to Use : Post washing your face , take 5-6 Drops of Elixir and apply directly to the face. Massage gently in a small circles upwards paying special attention to troubled spots. Use every night before going to bed and leave overnight.</span></p><p><br></p>",
+  "price": 0.0,
+  "image": "http://res.cloudinary.com/saiteja/image/upload/v1618469654/bondi_media/xtywy1465s1dx09uckkz.jpg",
+  "rating": 0,
+  "stockInUnits": 18,
+  "published": true,
+  "featured": false,
   "categoryId": "qdw0rjiarl80",
+  "genre": null,
   "types": [
     {
-      "label": "500g",
-      "price": "250"
+      "label": "Dry",
+      "value": "Dry"
     },
     {
-      "label": "100g",
-      "price": "350"
+      "label": "Oily",
+      "value": "Oily"
+    },
+    {
+      "label": "Normal",
+      "value": "Normal"
+    },
+    {
+      "label": "Combinational",
+      "value": "Combinational"
     }
   ],
   "variants": [
     {
-      "variant": "one"
+      "price": "350",
+      "label": "15ml"
     },
     {
-      "variant": "two"
+      "price": "600",
+      "label": "30ml"
+    },
+    {
+      "price": null,
+      "label": null
+    },
+    {
+      "price": null,
+      "label": null
     }
   ]
 }
 
 ###
-GET http://localhost:8080/api/products
+GET http://localhost:8080/api/products/slug/face-elixir-pro-v2
+
+###
+GET http://localhost:8080/api/products/slug/face-elixir
+
 ###
 DELETE http://localhost:8080/api/products

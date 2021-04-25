@@ -9,7 +9,8 @@ public interface ProductService {
     List<Product> addProducts(List<Product> products);
     Product updateProduct(Product product,String id);
     List<Product> getProducts();
-    Product getProduct(String slug);
+    Product getProduct(String id);
+    Product getProductBySlug(String slug);
     String deleteProduct(String id);
     String deleteAllProduct();
 }

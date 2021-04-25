@@ -34,8 +34,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> addProducts(List<Product> products) {
-        for (Product p: products
-             ) {
+        for (Product p : products
+        ) {
             Category category = categoryRepository.findById(p.getCategoryId()).orElseThrow(() -> new RuntimeException(String.format("Cannot Find Category with provided ID : %s", p.getCategoryId())));
             p.setGenre(category.getName());
             p.setSlug(slg.slugify(p.getTitle()));
@@ -58,7 +58,7 @@ public class ProductServiceImpl implements ProductService {
         oldProduct.setStockInUnits(product.getStockInUnits());
         oldProduct.setSlug(slg.slugify(product.getTitle()));
 
-        return productRepository.save(product);
+        return productRepository.save(oldProduct);
     }
 
     @Override
@@ -67,7 +67,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getProduct(String slug) {
+    public Product getProduct(String id) {
+        return productRepository.findById(id).orElseThrow(() -> new RuntimeException("invalid id"));
+
+    }
+
+    @Override
+    public Product getProductBySlug(String slug) {
         return productRepository.findProductBySlug(slug);
     }
 
