@@ -1,0 +1,77 @@
+
+###
+POST http://localhost:8080/api/orders/jAp2nG1VBd
+Content-Type: application/json
+
+{
+  "invoice": {
+    "receipt": "JjwWX0TRA",
+    "description": "Payment for the purchase at Bask In Nature.in",
+    "type": "link",
+    "amount": 78500,
+    "callback_url": "http://localhost:3000/user/checkout/?clan=SdRoLKRaD&",
+    "callback_method": "get"
+  },
+  "shppingFees": 85,
+  "lineItems": [
+    {
+      "name": "Almond oil",
+      "description": "1 item of  Almond oil - 15ml ",
+      "quantity": 1,
+      "amount": 250,
+      "currency": "INR",
+      "type": "invoice",
+      "varaint": "15ml",
+      "shppingFees": 85
+    },
+    {
+      "name": "Baby Bath Powder",
+      "description": "1 item of  Baby Bath Powder - 150g ",
+      "quantity": 1,
+      "amount": 250,
+      "currency": "INR",
+      "type": "invoice",
+      "varaint": "150g",
+      "shppingFees": 85
+    },
+    {
+      "name": "Baby Massage Oil",
+      "description": "1 item of  Baby Massage Oil - 100ml ",
+      "quantity": 1,
+      "amount": 200,
+      "currency": "INR",
+      "type": "invoice",
+      "varaint": "100ml",
+      "shppingFees": 85
+    }
+  ],
+  "shippingAddress": {
+    "id": 225,
+    "fullName": "Saiteja",
+    "phoneNumber": "9666934040",
+    "city": "Hyderabad ",
+    "line1": "403 BMR Residency, Addagutta Society ",
+    "line2": "KPHB",
+    "state": "Telangana",
+    "type": "HOME",
+    "zipcode": 500072,
+    "userId": 25
+  },
+  "userDetails": {
+    "username": "dhivyabanka@gmail.com",
+    "fullName": "Banka Dhivya",
+    "phoneNumber": "9666945050",
+    "dateOfBirth": "1995-02-07",
+    "gender": "MALE",
+    "memberSince": "2021-04-26",
+    "id": 25
+  },
+  "razorpay_payment_id": "pay_H3mQNTcVvJp8A8"
+
+}
+
+###
+GET http://localhost:8080/api/orders/Emla8NtGh
+
+###
+POST http://localhost:8080/api/orders/update/Emla8NtGh/1

@@ -96,4 +96,4 @@ GET http://localhost:8080/api/products/slug/face-elixir-pro-v2
 GET http://localhost:8080/api/products/slug/face-elixir
 
 ###
-DELETE http://localhost:8080/api/products
+GET http://localhost:8080/api/products
