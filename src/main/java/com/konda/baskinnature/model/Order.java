@@ -1,6 +1,7 @@
 package com.konda.baskinnature.model;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.nio.ByteBuffer;
@@ -18,6 +19,7 @@ import static java.lang.Character.MAX_RADIX;
 @Data
 @Document("order")
 public class Order {
+    @Id
     private String id;
     private HashMap<String, String> invoice;
     private ArrayList<HashMap<String, String>> line_items = new ArrayList<>();

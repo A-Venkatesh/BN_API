@@ -4,13 +4,13 @@ Content-Type: application/json
 {
   "variants": [
     {
-      "url": "http://"
+      "url": "https://cdn.shopify.com/s/files/1/0232/1317/8957/files/Website-GIF_1500x.gif?v=1612887082","title":"alpha","asset_id": "932384923728399"
     },
     {
-      "url": "http://"
+      "url": "https://cdn.shopify.com/s/files/1/0232/1317/8957/files/2-WEBSITE-BANNER-GIF--2_1300x.gif?v=1618317095","title":"beta","asset_id": "087430923239233"
     },
     {
-      "url": "http://"
+      "url": "https://cdn.shopify.com/s/files/1/0232/1317/8957/files/Website_A_ba6916a3-4f7c-4e38-bb99-73ba02072186_1500x.jpg?v=1619445582","title":"gamma","asset_id": "892963273827323"
     }
   ]
 }
