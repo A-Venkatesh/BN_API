@@ -11,13 +11,15 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/api/site
+PUT http://localhost:8080/api/site/
+#PUT http://store77.herokuapp.com/api/site
 Content-Type: application/json
 
 {
   "aboutus": "Describe about you and you're bussiness",
   "returnPolicy": "All you're site policy information here",
   "termsAndConditions": "Please describe the terms and conditions",
+  "privacyPolicy":"Privacy Policy",
   "username": "root",
   "password": "password"
 }

@@ -19,6 +19,7 @@ public class SiteServiceImpl implements SiteService {
         Site oldSiteDetails = siteRepository.findById("BASK_IN_NATURE").orElse(null);
         oldSiteDetails.setAboutus(site.getAboutus());
         oldSiteDetails.setReturnPolicy(site.getReturnPolicy());
+        oldSiteDetails.setPrivacyPolicy(site.getPrivacyPolicy());
         oldSiteDetails.setTermsAndConditions(site.getTermsAndConditions());
         oldSiteDetails.setPassword(site.getPassword());
         oldSiteDetails.setUsername(site.getUsername());

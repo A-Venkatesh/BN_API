@@ -17,7 +17,10 @@ public class Site {
     private String id = "BASK_IN_NATURE";
 
     private String aboutus;
+
     private String returnPolicy;
+    private String privacyPolicy;
+
     private String termsAndConditions;
 
     private String username = "root";
