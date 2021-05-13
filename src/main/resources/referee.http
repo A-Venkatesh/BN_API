@@ -11,13 +11,14 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8080/api/referees/HANNA100
+#PUT http://localhost:8080/api/referees/HANNA100
+PUT  https://store77.herokuapp.com/api/referees/JOHN
 Content-Type: application/json
 
 {
-  "id": "HANNA100",
-  "name": "hanna Baker",
-  "email": "hannas@223.com",
+  "id": "JOHN",
+  "name": "Jone Baker",
+  "email": "Jone@223.com",
   "orders": ["wdewd","wedwedw"]
 }
 

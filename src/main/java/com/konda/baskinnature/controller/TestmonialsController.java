@@ -24,16 +24,16 @@ public class TestmonialsController {
     public ResponseEntity<Testimonials> updateTestmony(@RequestBody Testimonials testimonials, @PathVariable String id) {
         return ResponseEntity.ok(testmonialsService.updateTestmony(testimonials, id));
     }
-
+    @GetMapping("/{id}")
     public ResponseEntity<Testimonials> getTestmony(@PathVariable String id) {
         return ResponseEntity.ok(testmonialsService.getTestmony(id));
     }
-
+    @GetMapping
     public ResponseEntity<List<Testimonials>> getTesmonies() {
         return ResponseEntity.ok(testmonialsService.getTesmonies());
 
     }
-
+    @DeleteMapping
     public ResponseEntity<String> deleteTesmonials(@PathVariable String id) {
         return ResponseEntity.ok(testmonialsService.deleteTesmonials(id));
     }
