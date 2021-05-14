@@ -33,7 +33,7 @@ public class TestmonialsController {
         return ResponseEntity.ok(testmonialsService.getTesmonies());
 
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTesmonials(@PathVariable String id) {
         return ResponseEntity.ok(testmonialsService.deleteTesmonials(id));
     }
