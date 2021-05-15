@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -31,4 +32,10 @@ public class Order {
     private int shippingFees;
     private String userId;
     private Status status;
+    private String coupon = null;
+    private boolean couponApplied = false;
+    private float discountedPrice;
+    private Date postedOn = new Date();
+
+
 }
