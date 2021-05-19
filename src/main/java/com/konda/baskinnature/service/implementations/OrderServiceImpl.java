@@ -34,6 +34,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<Order> getOrdersByUser(String id) {
+        return orderRepository.getOrderByUserId(id);
+    }
+
+    @Override
     public Order setOrderStatus(String id, int code) {
         Order orderRequest = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("invalid ID"));
 

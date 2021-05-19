@@ -37,5 +37,10 @@ public class OrderController {
     public ResponseEntity<Order> setOrderStatus(@PathVariable String id, @PathVariable int code) {
         return ResponseEntity.ok(orderService.setOrderStatus(id, code));
     }
+
+    @GetMapping("/user/{id}")
+    public ResponseEntity<List<Order>> getOrdersByUserId(@PathVariable String id){
+        return ResponseEntity.ok(orderService.getOrdersByUser(id));
+    }
 }
 

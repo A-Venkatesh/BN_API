@@ -13,4 +13,6 @@ public interface OrderService {
     Order getOrder(String id);
 
     Order setOrderStatus(String id, int code);
+
+    List<Order> getOrdersByUser(String id);
 }
