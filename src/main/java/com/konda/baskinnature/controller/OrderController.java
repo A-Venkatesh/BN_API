@@ -2,6 +2,7 @@ package com.konda.baskinnature.controller;
 
 import com.konda.baskinnature.model.Order;
 import com.konda.baskinnature.model.Status;
+import com.konda.baskinnature.model.StockObject;
 import com.konda.baskinnature.service.implementations.OrderServiceImpl;
 import com.konda.baskinnature.service.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,11 @@ public class OrderController {
     @GetMapping("/user/{id}")
     public ResponseEntity<List<Order>> getOrdersByUserId(@PathVariable String id){
         return ResponseEntity.ok(orderService.getOrdersByUser(id));
+    }
+
+    @PostMapping("/stock")
+    public void updateStock(@RequestBody List<StockObject> stockObjects){
+        orderService.updateStock(stockObjects);
     }
 }
 
