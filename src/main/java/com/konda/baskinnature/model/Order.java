@@ -24,6 +24,7 @@ public class Order {
     private String id;
     private HashMap<String, String> invoice;
     private ArrayList<HashMap<String, String>> line_items = new ArrayList<>();
+    private ArrayList<HashMap<String, String>> stockObject = new ArrayList<>();
     private HashMap<String, String> shippingAddress;
     private HashMap<String, String> userDetails;
     private String razorpay_payment_id;
