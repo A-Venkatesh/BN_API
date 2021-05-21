@@ -1,9 +1,6 @@
 package com.konda.baskinnature.service.implementations;
 
-import com.konda.baskinnature.model.Order;
-import com.konda.baskinnature.model.Product;
-import com.konda.baskinnature.model.Status;
-import com.konda.baskinnature.model.StockObject;
+import com.konda.baskinnature.model.*;
 import com.konda.baskinnature.repository.OrderRepository;
 import com.konda.baskinnature.repository.ProductRepository;
 import com.konda.baskinnature.service.services.OrderService;
@@ -46,10 +43,13 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void updateStock(List<StockObject> stockObjects) {
-        for (StockObject item : stockObjects) {
-            Product product = productRepository.findById(item.getId()).orElseThrow(() -> new RuntimeException("invalid object"));
-            int result = product.getStockInUnits() - parseInt(item.getQuantity());
+    public void updateStock(StockObjectList stockObjectList) {
+
+        System.out.println((stockObjectList.getStockObjects()));
+        List<StockObject> list = stockObjectList.getStockObjects();
+        for (StockObject s :  list){
+            Product product = productRepository.findById(s.getId()).orElseThrow(() -> new RuntimeException("invalid object"));
+            int result = product.getStockInUnits() - parseInt(s.getQuantity());
             if (result == 0) {
                 product.setStockInUnits(0);
             } else {
@@ -70,6 +70,31 @@ public class OrderServiceImpl implements OrderService {
             product.setRating(product.getRating());
             productRepository.save(product);
         }
+//        for (StockObjectList item : stockObjectList) {
+//            Product product = productRepository.findById(item.getId()).orElseThrow(() -> new RuntimeException("invalid object"));
+//            int result = product.getStockInUnits() - parseInt(item.getQuantity());
+//            if (result == 0) {
+//                product.setStockInUnits(0);
+//            } else {
+//                product.setStockInUnits(result);
+//            }
+//            product.setTypes(product.getTypes());
+//            product.setPublished(product.getPublished());
+//            product.setPrice(product.getPrice());
+//            product.setImage(product.getImage());
+//            product.setVariants(product.getVariants());
+//            product.setFeatured(product.getFeatured());
+//            product.setDescription(product.getDescription());
+//            product.setTitle(product.getTitle());
+//            product.setGenre(product.getGenre());
+//            product.setSlug(product.getSlug());
+//            product.setCategoryId(product.getCategoryId());
+//            product.setId(product.getId());
+//            product.setRating(product.getRating());
+//            productRepository.save(product);
+//        }
+
+
     }
 
     @Override

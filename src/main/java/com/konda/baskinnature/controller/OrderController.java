@@ -3,6 +3,7 @@ package com.konda.baskinnature.controller;
 import com.konda.baskinnature.model.Order;
 import com.konda.baskinnature.model.Status;
 import com.konda.baskinnature.model.StockObject;
+import com.konda.baskinnature.model.StockObjectList;
 import com.konda.baskinnature.service.implementations.OrderServiceImpl;
 import com.konda.baskinnature.service.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +46,8 @@ public class OrderController {
     }
 
     @PostMapping("/stock")
-    public void updateStock(@RequestBody List<StockObject> stockObjects){
-        orderService.updateStock(stockObjects);
+    public void updateStock(@RequestBody StockObjectList stockObjectList){
+        orderService.updateStock(stockObjectList);
     }
 }
 

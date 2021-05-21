@@ -3,6 +3,7 @@ package com.konda.baskinnature.service.services;
 import com.konda.baskinnature.model.Order;
 import com.konda.baskinnature.model.Status;
 import com.konda.baskinnature.model.StockObject;
+import com.konda.baskinnature.model.StockObjectList;
 
 import java.util.List;
 
@@ -17,5 +18,5 @@ public interface OrderService {
 
     List<Order> getOrdersByUser(String id);
 
-    void updateStock(List<StockObject> stockObjects);
+    void updateStock(StockObjectList stockObjectList);
 }

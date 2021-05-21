@@ -67,7 +67,6 @@ Content-Type: application/json
     "id": 25
   },
   "razorpay_payment_id": "pay_H3mQNTcVvJp8A8"
-
 }
 
 ###
@@ -75,3 +74,25 @@ GET http://localhost:8080/api/orders/Emla8NtGh
 
 ###
 POST http://localhost:8080/api/orders/update/Emla8NtGh/1
+
+
+###
+POST http://localhost:8080/api/orders/stock
+Content-Type: application/json
+
+{
+  "stockObjects": [
+    {
+      "quantity": "1",
+      "id": "rkxbuh8dzvau"
+    },
+    {
+      "quantity": "2",
+      "id": "1iepgyik2c853"
+    },
+    {
+      "quantity": "1",
+      "id": "t4w75rpk5fle"
+    }
+  ]
+}
