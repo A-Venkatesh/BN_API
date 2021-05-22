@@ -33,10 +33,10 @@ public class Order {
     private int shippingFees;
     private String userId;
     private Status status;
+    private String awb;
+    private String courierName;
     private String coupon = null;
     private boolean couponApplied = false;
     private float discountedPrice;
     private Date postedOn = new Date();
-
-
 }

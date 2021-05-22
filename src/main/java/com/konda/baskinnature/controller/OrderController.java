@@ -1,15 +1,13 @@
 package com.konda.baskinnature.controller;
 
-import com.konda.baskinnature.model.Order;
-import com.konda.baskinnature.model.Status;
-import com.konda.baskinnature.model.StockObject;
-import com.konda.baskinnature.model.StockObjectList;
+import com.konda.baskinnature.model.*;
 import com.konda.baskinnature.service.implementations.OrderServiceImpl;
 import com.konda.baskinnature.service.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 @RestController
@@ -36,8 +34,8 @@ public class OrderController {
     }
 
     @PostMapping("/update/{id}/{code}")
-    public ResponseEntity<Order> setOrderStatus(@PathVariable String id, @PathVariable int code) {
-        return ResponseEntity.ok(orderService.setOrderStatus(id, code));
+    public ResponseEntity<Order> setOrderStatus(@PathVariable String id, @PathVariable int code, @RequestBody UpdateDetails updateDetails) throws MessagingException {
+        return ResponseEntity.ok(orderService.setOrderStatus(id, code, updateDetails));
     }
 
     @GetMapping("/user/{id}")

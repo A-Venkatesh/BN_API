@@ -70,10 +70,19 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/orders/Emla8NtGh
-
+GET http://localhost:8080/api/orders/user/kondasaitej@gmail.com
 ###
-POST http://localhost:8080/api/orders/update/Emla8NtGh/1
+POST http://localhost:8080/api/orders/update/60a8b33d416b9fd13caf3fcc/1
+Content-Type: application/json
+
+{
+  "awb": "AKIMNIWDWD",
+  "courierName": "Blue Dart",
+  "email": "kondasaitej@gmail.com",
+  "name": "Saiteja Konda",
+  "orderId": "BIN22052021IWMW"
+}
+
 
 
 ###

@@ -1,10 +1,8 @@
 package com.konda.baskinnature.service.services;
 
-import com.konda.baskinnature.model.Order;
-import com.konda.baskinnature.model.Status;
-import com.konda.baskinnature.model.StockObject;
-import com.konda.baskinnature.model.StockObjectList;
+import com.konda.baskinnature.model.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 public interface OrderService {
@@ -14,7 +12,7 @@ public interface OrderService {
 
     Order getOrder(String id);
 
-    Order setOrderStatus(String id, int code);
+    Order setOrderStatus(String id, int code, UpdateDetails updateDetails) throws MessagingException;
 
     List<Order> getOrdersByUser(String id);
 
