@@ -70,7 +70,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/orders/user/kondasaitej@gmail.com
+GET http://localhost:8080/api/orders/user/manyam@gmail.com
 ###
 POST http://localhost:8080/api/orders/update/60a8b33d416b9fd13caf3fcc/1
 Content-Type: application/json

@@ -14,6 +14,7 @@ public class Referee {
     private String id;
     private String name;
     private String email;
+    private String password;
     private int totalSales =0;
     private float percentage =10;
     private ArrayList<String> orders;

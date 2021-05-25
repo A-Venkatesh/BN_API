@@ -19,4 +19,5 @@ public class Category {
     @Indexed
     private String id = Long.toString(ByteBuffer.wrap(UUID.randomUUID().toString().getBytes()).getLong(), Character.MAX_RADIX);
     private String name;
+    private int sales;
 }

@@ -1,6 +1,7 @@
 package com.konda.baskinnature.service.implementations;
 
 import com.konda.baskinnature.model.*;
+import com.konda.baskinnature.repository.CategoryRepository;
 import com.konda.baskinnature.repository.OrderRepository;
 import com.konda.baskinnature.repository.ProductRepository;
 import com.konda.baskinnature.service.services.OrderService;
@@ -19,6 +20,8 @@ public class OrderServiceImpl implements OrderService {
     OrderRepository orderRepository;
     @Autowired
     ProductRepository productRepository;
+    @Autowired
+    CategoryRepository categoryRepository;
 
     @Autowired
     @Qualifier("javaMailSender")
@@ -57,6 +60,8 @@ public class OrderServiceImpl implements OrderService {
         List<StockObject> list = stockObjectList.getStockObjects();
         for (StockObject s :  list){
             Product product = productRepository.findById(s.getId()).orElseThrow(() -> new RuntimeException("invalid object"));
+            Category category = categoryRepository.findById(s.getCategoryId()).orElseThrow(() -> new RuntimeException(("Invalid id ")));
+            category.setSales(category.getSales() + parseInt(s.getQuantity()));
             int result = product.getStockInUnits() - parseInt(s.getQuantity());
             if (result == 0) {
                 product.setStockInUnits(0);
