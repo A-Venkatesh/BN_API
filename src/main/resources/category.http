@@ -2,7 +2,7 @@ POST http://localhost:8080/api/categories
 Content-Type: application/json
 
 {
-  "name": "Hair"
+  "name": "Haidr"
 }
 ###
 PUT http://localhost:8080/api/categories/rlan84nci2pk

@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "title": "detetel dede",
-  "categoryId": "qdw0rjiarl80",
+  "categoryId": "qe11m1uopr8w",
   "types": [
     {
       "label": "50g",
@@ -49,7 +49,7 @@ Content-Type: application/json
   "stockInUnits": 18,
   "published": true,
   "featured": false,
-  "categoryId": "qdw0rjiarl80",
+  "categoryId": "qe11m1uopr8w",
   "genre": null,
   "types": [
     {

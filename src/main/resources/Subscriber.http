@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/subcribers
+Content-Type: application/json
+
+{
+  "name": "Saiteja Konda",
+  "email": "kondasaitej@gmail.com"
+}
+
+###
+
+GET  http://localhost:8080/api/subcribers

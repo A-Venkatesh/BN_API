@@ -1,78 +1,93 @@
 
 ###
-POST http://localhost:8080/api/orders/jAp2nG1VBd
+POST http://localhost:8080/api/orders/BIN2752021-G249Z
 Content-Type: application/json
 
 {
   "invoice": {
-    "receipt": "JjwWX0TRA",
-    "description": "Payment for the purchase at Bask In Nature.in",
+    "callback_url": "https://baskinnature.in/user/checkout/?clan=SdRoLKRaD&invoice=BIN2752021-G249X",
+    "amount": "12460",
+    "description": "Payment for the purchase at Bask in Nature.in",
+    "receipt": "BIN2752021-G249X",
     "type": "link",
-    "amount": 78500,
-    "callback_url": "http://localhost:3000/user/checkout/?clan=SdRoLKRaD&",
     "callback_method": "get"
   },
-  "shppingFees": 85,
-  "lineItems": [
+  "line_items": [
     {
-      "name": "Almond oil",
-      "description": "1 item of  Almond oil - 15ml ",
-      "quantity": 1,
-      "amount": 250,
+      "amount": "10",
+      "shippingFees": "85",
+      "quantity": "1",
+      "name": "Natural Hair colour",
+      "description": "1 item of  Natural Hair colour - 150 ",
       "currency": "INR",
+      "id": "qhnt93a9c75i",
+      "_description": "Natural Hair colour - 150  ",
       "type": "invoice",
-      "varaint": "15ml",
-      "shppingFees": 85
+      "varaint": "150"
     },
     {
-      "name": "Baby Bath Powder",
-      "description": "1 item of  Baby Bath Powder - 150g ",
-      "quantity": 1,
-      "amount": 250,
+      "amount": "10",
+      "shippingFees": "85",
+      "quantity": "1",
+      "name": "Beetroot Lip Balm",
+      "description": "1 item of  Beetroot Lip Balm - 13  - Tub",
       "currency": "INR",
+      "id": "1hrj7yu0l0v8y",
+      "_description": "Beetroot Lip Balm - 13  - Tub ",
       "type": "invoice",
-      "varaint": "150g",
-      "shppingFees": 85
+      "varaint": "13"
     },
     {
-      "name": "Baby Massage Oil",
-      "description": "1 item of  Baby Massage Oil - 100ml ",
-      "quantity": 1,
-      "amount": 200,
+      "amount": "24",
+      "shippingFees": "85",
+      "quantity": "1",
+      "name": "Pink Lip Balm",
+      "description": "1 item of  Pink Lip Balm - 13g  - Tub",
       "currency": "INR",
+      "id": "sl8wudmzw0fk",
+      "_description": "Pink Lip Balm - 13g  - Tub ",
       "type": "invoice",
-      "varaint": "100ml",
-      "shppingFees": 85
+      "varaint": "13g"
     }
   ],
+  "stockObject": [],
   "shippingAddress": {
-    "id": 225,
-    "fullName": "Saiteja",
-    "phoneNumber": "9666934040",
-    "city": "Hyderabad ",
-    "line1": "403 BMR Residency, Addagutta Society ",
-    "line2": "KPHB",
-    "state": "Telangana",
+    "zipcode": "600034",
+    "phoneNumber": "7702665256",
+    "city": "chennai",
+    "fullName": "sirisha",
+    "id": "355",
+    "state": "Tamil Nadu",
     "type": "HOME",
-    "zipcode": 500072,
-    "userId": 25
+    "line2": "west mada street, nungambakkam",
+    "userId": "kondasaitej@gmail.com",
+    "line1": "21/86"
   },
   "userDetails": {
-    "username": "dhivyabanka@gmail.com",
-    "fullName": "Banka Dhivya",
-    "phoneNumber": "9666945050",
-    "dateOfBirth": "1995-02-07",
-    "gender": "MALE",
-    "memberSince": "2021-04-26",
-    "id": 25
+    "image": "https://lh3.googleusercontent.com/a/AATXAJzNZ1fi7jRr_a0uJJaP4aokQOFYdXDhr8Mgbu2B=s96-c",
+    "fullName": "Sample Order",
+    "email": "baskinnaturetest@gmail.com"
   },
-  "razorpay_payment_id": "pay_H3mQNTcVvJp8A8"
+  "razorpay_payment_id": "pay_HFpoxGtQaYGema",
+  "data": {
+    "vpa": "7010056430@kotak",
+    "rrn": "114719444825"
+  },
+  "method": "vpa",
+  "shippingFees": 85,
+  "userId": "baskinnaturetest@gmail.com",
+  "coupon": "loyal10",
+  "couponApplied": true,
+  "discountedPrice": 4.4
 }
 
 ###
 GET http://localhost:8080/api/orders/user/manyam@gmail.com
+######
+GET https://store77.herokuapp.com/api/orders
+
 ###
-POST http://localhost:8080/api/orders/update/60a8b33d416b9fd13caf3fcc/1
+POST http://localhost:8080/api/orders/update/BIN07062021ZI4NCW/2
 Content-Type: application/json
 
 {
@@ -105,3 +120,5 @@ Content-Type: application/json
     }
   ]
 }
+
+
