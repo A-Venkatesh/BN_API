@@ -39,4 +39,5 @@ public class Order {
     private boolean couponApplied = false;
     private float discountedPrice;
     private Date postedOn = new Date();
+    private String mode = "internal";
 }

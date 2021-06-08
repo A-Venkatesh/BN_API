@@ -1,14 +1,15 @@
 
 ###
-POST http://localhost:8080/api/orders/BIN2752021-G249Z
+POST http://localhost:8080/api/orders/BIN08062021LPVOH8
 Content-Type: application/json
 
 {
+  "id": "BIN08062021LPVOH8",
   "invoice": {
     "callback_url": "https://baskinnature.in/user/checkout/?clan=SdRoLKRaD&invoice=BIN2752021-G249X",
     "amount": "12460",
     "description": "Payment for the purchase at Bask in Nature.in",
-    "receipt": "BIN2752021-G249X",
+    "receipt": "BIN08062021LPVOH8",
     "type": "link",
     "callback_method": "get"
   },
@@ -53,20 +54,20 @@ Content-Type: application/json
   "stockObject": [],
   "shippingAddress": {
     "zipcode": "600034",
-    "phoneNumber": "7702665256",
-    "city": "chennai",
-    "fullName": "sirisha",
+    "phoneNumber": "9666934040",
+    "city": "Hyderabad",
+    "fullName": "Saiteja Konda",
     "id": "355",
-    "state": "Tamil Nadu",
+    "state": "Telangana",
     "type": "HOME",
-    "line2": "west mada street, nungambakkam",
+    "line2": "west maredipallie street, old city",
     "userId": "kondasaitej@gmail.com",
     "line1": "21/86"
   },
   "userDetails": {
     "image": "https://lh3.googleusercontent.com/a/AATXAJzNZ1fi7jRr_a0uJJaP4aokQOFYdXDhr8Mgbu2B=s96-c",
-    "fullName": "Sample Order",
-    "email": "baskinnaturetest@gmail.com"
+    "fullName": "Saiteja Konda",
+    "email": "kondasaitej@gmail.com"
   },
   "razorpay_payment_id": "pay_HFpoxGtQaYGema",
   "data": {
@@ -75,7 +76,7 @@ Content-Type: application/json
   },
   "method": "vpa",
   "shippingFees": 85,
-  "userId": "baskinnaturetest@gmail.com",
+  "userId": "kondasaitej@gmail.com",
   "coupon": "loyal10",
   "couponApplied": true,
   "discountedPrice": 4.4
@@ -87,7 +88,7 @@ GET http://localhost:8080/api/orders/user/manyam@gmail.com
 GET https://store77.herokuapp.com/api/orders
 
 ###
-POST http://localhost:8080/api/orders/update/BIN07062021ZI4NCW/2
+POST http://localhost:8080/api/orders/update/BIN070620211IUW_A/2
 Content-Type: application/json
 
 {
