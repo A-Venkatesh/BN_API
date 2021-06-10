@@ -83,9 +83,9 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/orders/user/manyam@gmail.com
+GET http://localhost:8080/api/orders/BIN10062021YGKEZF
 ######
-GET https://store77.herokuapp.com/api/orders
+GET https://store77.herokuapp.com/api/orders/
 
 ###
 POST http://localhost:8080/api/orders/update/BIN070620211IUW_A/2
@@ -122,4 +122,5 @@ Content-Type: application/json
   ]
 }
 
-
+###
+GET http://localhost:8080/api/orders/release/BIN10062021LRUPEB?razorpay_payment_id=dkemslkeomdd

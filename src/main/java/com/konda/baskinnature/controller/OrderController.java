@@ -3,6 +3,7 @@ package com.konda.baskinnature.controller;
 import com.konda.baskinnature.model.*;
 import com.konda.baskinnature.service.implementations.OrderServiceImpl;
 import com.konda.baskinnature.service.services.OrderService;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,13 +40,19 @@ public class OrderController {
     }
 
     @GetMapping("/user/{id}")
-    public ResponseEntity<List<Order>> getOrdersByUserId(@PathVariable String id){
+    public ResponseEntity<List<Order>> getOrdersByUserId(@PathVariable String id) {
         return ResponseEntity.ok(orderService.getOrdersByUser(id));
     }
 
     @PostMapping("/stock")
-    public void updateStock(@RequestBody StockObjectList stockObjectList){
+    public void updateStock(@RequestBody StockObjectList stockObjectList) {
         orderService.updateStock(stockObjectList);
+    }
+
+    @SneakyThrows
+    @GetMapping("/release/{id}")
+    public ResponseEntity<Order> releaseOrder(@PathVariable String id, @RequestParam String razorpay_payment_id) throws MessagingException {
+        return ResponseEntity.ok(orderService.ReleaserOrder(id, razorpay_payment_id));
     }
 }
 

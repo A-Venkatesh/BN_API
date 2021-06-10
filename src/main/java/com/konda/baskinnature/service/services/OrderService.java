@@ -17,4 +17,6 @@ public interface OrderService {
     List<Order> getOrdersByUser(String id);
 
     void updateStock(StockObjectList stockObjectList);
+
+    Order ReleaserOrder (String id, String razorpay_payment_id) throws MessagingException;
 }
